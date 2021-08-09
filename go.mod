@@ -1,4 +1,4 @@
-module gorm-mysql
+module mindnet-api
 
 go 1.14
 

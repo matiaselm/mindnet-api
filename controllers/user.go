@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 	"net/http"
-	"gorm-mysql/database"
-	"gorm-mysql/models"
+	"mindnet-api/database"
+	"mindnet-api/models"
 )
 
 type UserRepo struct {
@@ -33,7 +33,7 @@ func CreateUser(c *gin.Context) {
 	return
 	}
 
-	// Create book
+	// Create user
 	user := models.User{Name: input.Name, Email: input.Email}
 	database.DB.Create(&user)
 
